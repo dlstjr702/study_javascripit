@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.자바스크립트 개발 환경과 실행방법</title>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+    <script>
+        const $counter = document.getElementById("counter");
+        const $increase = document.getElementById("increase");
+        const $decrease = document.getElementById("decrease");
+
+        let num = 0;
+        const render = function(){$counter.innerHTML = num;};
+
+
+        $increase.onclick = function(){
+            num++;
+            console.log('increase버튼 클릭',num);
+            render();
+        }
+
+        $decrease.onclick = function(){
+            num--;
+            console.log('decrease버튼 클릭',num);
+            render();
+        }
+
+    </script>
+
+    <script>
+        const arr = [1,2,3];
+        arr.forEach(console.log);
+    </script>
+</body>
+</html>
